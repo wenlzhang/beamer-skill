@@ -137,6 +137,10 @@ beamer-skill/
     └── biblatex-frame.tex
 ```
 
+## Related projects
+
+- **[ppt-to-beamer-skill](https://github.com/wenlzhang/ppt-to-beamer-skill)** — if you need a *custom-branded* Beamer theme that approximates your institution's PowerPoint template (colours, fonts, layouts, logos), install that companion skill. It handles the one-off "build a theme from this `.potx`" task; this `beamer-skill` then helps you author slides on top of whatever theme you end up with.
+
 ## Limitations and honest caveats
 
 - **Beamer is the engine, not this skill.** Bugs in the *output* PDF that trace to Beamer itself (theme rendering, navigation symbols, `pgfpages` quirks) should be reported upstream at <https://github.com/josephwright/beamer/issues>, not here.
