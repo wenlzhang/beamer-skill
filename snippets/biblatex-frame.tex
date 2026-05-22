@@ -1,0 +1,56 @@
+% biblatex setup + a References frame.
+% Preamble fragment + frame fragment.
+%
+% Compile sequence:
+%   pdflatex deck.tex
+%   biber deck
+%   pdflatex deck.tex
+%   pdflatex deck.tex
+
+% ---- Preamble ----
+\usepackage[backend=biber, style=authoryear, sorting=ynt]{biblatex}
+\addbibresource{refs.bib}
+
+% Style alternatives:
+%   style=numeric       -- [1], [2], ...
+%   style=numeric-comp  -- [1-3] compact
+%   style=alphabetic    -- [Smi24]
+%   style=ieee          -- IEEE journals
+%   style=apa           -- APA 7th
+
+% ---- Inline citations ----
+%   \textcite{key}   -- "Smith (2024) showed ..."
+%   \parencite{key}  -- "(Smith 2024)"
+%   \cite{key}       -- style-default (often same as \parencite)
+%   \footcite{key}   -- cite in a footnote
+
+% ---- References frame (end of deck) ----
+\begin{frame}[allowframebreaks]{References}
+    \printbibliography[heading=none]
+\end{frame}
+
+% For a one-slide bibliography that fits without page-breaks:
+%
+% \begin{frame}{References}
+%     \scriptsize
+%     \printbibliography[heading=none]
+% \end{frame}
+
+% ---- Minimal refs.bib example ----
+%
+% @article{smith2024quantum,
+%     author    = {Smith, J. and Doe, A.},
+%     title     = {Quantum widget dynamics},
+%     journal   = {Phys. Rev. Lett.},
+%     year      = {2024},
+%     volume    = {132},
+%     pages     = {123--130},
+%     doi       = {10.1103/PhysRevLett.132.123},
+% }
+%
+% @inproceedings{doe2023learning,
+%     author    = {Doe, A. and Roe, B.},
+%     title     = {Learning to learn},
+%     booktitle = {NeurIPS},
+%     year      = {2023},
+% }

@@ -1,0 +1,60 @@
+% Deck skeleton -- safe defaults for a 16:9 academic talk.
+% Compile: pdflatex deck.tex && pdflatex deck.tex
+%          (add: biber deck && pdflatex deck.tex if using biblatex)
+
+\documentclass[aspectratio=169]{beamer}
+\usetheme{Madrid}              % swap for metropolis / Berlin / Singapore / default
+\usecolortheme{default}
+\usefonttheme{professionalfonts}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[british]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+
+\usepackage{hyperref}          % must be LAST
+
+\setbeamertemplate{navigation symbols}{}
+
+\title{Talk Title}
+\subtitle{Optional subtitle}
+\author{Author Name}
+\institute{Affiliation}
+\date{\today}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}{Outline}
+    \tableofcontents
+\end{frame}
+
+\section{Introduction}
+\begin{frame}{Why this matters}
+    Content here.
+\end{frame}
+
+\section{Method}
+\begin{frame}{Approach}
+    Content here.
+\end{frame}
+
+\section{Results}
+\begin{frame}{Results}
+    Content here.
+\end{frame}
+
+\section{Conclusions}
+\begin{frame}{Summary}
+    Content here.
+\end{frame}
+
+\end{document}
